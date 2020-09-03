@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "micameo-front-talent"
+    }
+  },
+  "defaultProject": "micameo-front-talent",
+  "cli": {
+    "analytics": "5b1de9fd-19a4-4601-85c5-9a9cc90e48f9"
+  }
 }
