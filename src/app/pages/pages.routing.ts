@@ -15,10 +15,10 @@ const routes: Routes = [
         path: 'dashboard',
         component: PagesComponent,
         children: [
-          { path: '', component: DashboardComponent },
-          { path: 'grafica1', component: Grafica1Component },
-          { path: 'progress', component: ProgressComponent },
-          { path: 'account-settings', component: AccountSettingsComponent },
+          { path: '', component: DashboardComponent, data: { titulo: 'Dashboard' } },
+          { path: 'grafica1', component: Grafica1Component, data: { titulo: 'Grafica' } },
+          { path: 'progress', component: ProgressComponent, data: { titulo: 'Progress' } },
+          { path: 'account-settings', component: AccountSettingsComponent, data: { titulo: 'Tema' } },
     
         ]
       },

@@ -16,7 +16,7 @@
                         <li><a href="javascript:void()">My Balance</a></li>
                         <li><a href="javascript:void()">Inbox</a></li>
                         <li><a routerLink="account-settings">Account Setting</a></li>
-                        <li><a routerLink="/login">Salir</a></li>
+                        <li><a routerLink="/login" >Salir</a></li>
                     </ul>
                 </li>
                 <li class="nav-devider"></li>
@@ -28,7 +28,9 @@
                                 class="label label-rouded label-themecolor pull-right"> {{item.submenu.length   }} </span></span></a>
                     <ul aria-expanded="false" class="collapse">
                         <li *ngFor="let subItem of item.submenu">
-                            <a [routerLink]="subItem.url"> {{subItem.titulo}} </a>
+                            <a  [routerLink]="subItem.url" 
+                                routerLinkActive="active" 
+                                [routerLinkActiveOptions]=" {exact: true} " > {{subItem.titulo}} </a>
                         </li>
                     </ul>
                 </li>
