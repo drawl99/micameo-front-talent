@@ -1,1 +1,144 @@
-<p>dashboard works!</p>
+<div class="row animated fadeIn fast">
+    <div class="col-lg-4">
+        <div class="card bg-info">
+            <div class="card-body">
+                <div class="d-flex no-block">
+                    <div class="m-r-20 align-self-center"><img src="../assets/images/icon/income-w.png" alt="Income"></div>
+                    <div class="align-self-center">
+                        <h6 class="text-white m-t-10 m-b-0">Ordenes completadas</h6>
+                        <h2 class="m-t-0 text-white"> {{resp.odenes_completadas}} </h2></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-4">
+        <div class="card bg-success">
+            <div class="card-body">
+                <div class="d-flex no-block">
+                    <div class="m-r-20 align-self-center"><img src="../assets/images/icon/expense-w.png" alt="Income"></div>
+                    <div class="align-self-center">
+                        <h6 class="text-white m-t-10 m-b-0">Ordenes pendientes</h6>
+                        <h2 class="m-t-0 text-white"> {{resp.ordenes_pendientes}} </h2></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-4" *ngIf="balance">
+        <div class="card bg-primary">
+            <div class="card-body">
+                <div class="d-flex no-block">
+                    <div class="m-r-20 align-self-center"><img src="../assets/images/icon/assets-w.png" alt="Income"></div>
+                    <div class="align-self-center">
+                        <h6 class="text-white m-t-10 m-b-0">Balance actual</h6>
+                        <h2 class="m-t-0 text-white"> {{balance.amount}} </h2></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- <div class="col-lg-3">
+        <div class="card bg-danger">
+            <div class="card-body">
+                <div class="d-flex no-block">
+                    <div class="m-r-20 align-self-center"><img src="../assets/images/icon/staff-w.png" alt="Income"></div>
+                    <div class="align-self-center">
+                        <h6 class="text-white m-t-10 m-b-0">Total Staff</h6>
+                        <h2 class="m-t-0 text-white">987,563</h2></div>
+                </div>
+            </div>
+        </div>
+    </div> -->
+</div>
+
+<div class="row animated fadeIn fast">
+    <!-- <div class="col-lg-6 col-md-12">
+        <div class="card">
+            <div class="card-body">
+                <div class="d-flex">
+                    <div>
+                        <h3 class="card-title m-b-5"><span class="lstick"></span>Sales Overview </h3>
+                    </div>
+                    <div class="ml-auto">
+                        <select class="custom-select b-0">
+                            <option selected="">January 2017</option>
+                            <option value="1">February 2017</option>
+                            <option value="2">March 2017</option>
+                            <option value="3">April 2017</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-theme stats-bar">
+                <div class="row">
+                    <div class="col-lg-4 col-md-4">
+                        <div class="p-20 active">
+                            <h6 class="text-white">Total Sales</h6>
+                            <h3 class="text-white m-b-0">$10,345</h3>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-4">
+                        <div class="p-20">
+                            <h6 class="text-white">This Month</h6>
+                            <h3 class="text-white m-b-0">$7,589</h3>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-4">
+                        <div class="p-20">
+                            <h6 class="text-white">This Week</h6>
+                            <h3 class="text-white m-b-0">$1,476</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card-body">
+                
+                <app-bar [labels]="labels2" [data]="data2"></app-bar>
+            </div>
+        </div>
+    </div> -->
+    <!-- <div class="col-lg-3 col-md-6">
+        <div class="card">
+            <img class="card-img-top img-fluid auto-height" src="./assets/images/big/img1.jpg" alt="Card image cap">
+            <div class="card-body">
+                <h3 class="font-normal">Business development of rules 2017</h3>
+                <span class="label label-info label-rounded">Technology</span>
+                <p class="m-b-0 m-t-20">Titudin venenatis ipsum aciat. Vestibu ullamer quam. nenatis ipsum ac feugiat. Ibulum ullamcorper.</p>
+                <div class="d-flex m-t-20">
+                    <button class="btn p-l-0 btn-link ">Read more</button>
+                    <div class="ml-auto align-self-center">
+                        <a href="javascript:void(0)" class="link m-r-10"><i class="fa fa-heart-o"></i></a>
+                        <a href="javascript:void(0)" class="link m-r-10"><i class="fa fa-share-alt"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> -->
+    <!-- ============================================================== -->
+    <!-- visit charts-->
+    <!-- ============================================================== -->
+    <div *ngIf="ocassions.length>0 else noInfo " class="col-lg-12 col-md-12">
+        <div class="card">
+            <div class="card-body">
+                <app-dona titulo="Ventas por ocasiones"
+                [labels]="labels1"
+                [data]="data1"></app-dona>
+                <table class="table vm font-14 m-b-0">
+                    <tbody><tr *ngFor="let occasion of ocassions">
+                        <td class="b-0"> {{occasion.occasion__occasion_name}} </td>
+                        <td class="text-right font-medium b-0">{{(occasion.total_order/total)|percent}}</td>
+                    </tr>
+                    
+                </tbody></table>
+            </div>
+        </div>
+    </div>
+
+    <ng-template #noInfo>
+        <div class="col-lg-6 col-md-12">
+            <div class="card">
+                <div class="card-body">
+                    <h2> No tienes ordenes </h2>
+                </div>
+            </div>
+        </div>
+    </ng-template>
+</div>

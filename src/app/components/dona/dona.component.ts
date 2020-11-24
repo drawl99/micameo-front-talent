@@ -19,7 +19,7 @@ export class DonaComponent {
   ];
 
   public colors: Color[] = [
-    { backgroundColor: [ '#6857E6', '#009FEE', '#F02059' ] }
+    { backgroundColor: [ '#6857E6', '#009FEE', '#F02059', '#117864', '#5B2C6F', '#935116', '#5D4037 ' ] }
   ];
 
 }

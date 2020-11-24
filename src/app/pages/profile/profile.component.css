@@ -1,0 +1,44 @@
+.wrap-avatar{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border-style: solid;
+    border: solid 5px;
+    border-color: #32005f;
+    box-shadow: 0 0 8px 3px #B8B8B8;
+    position: relative;
+    object-fit: cover;
+    /* background-color: #32005f; */
+  }
+  
+  .wrap-avatar label{
+    position: absolute;
+    top: 20px;
+    right: -7px;
+    /* border: 1px solid; */
+    border-radius: 50%;
+    /* padding: 11px; */
+    height: 30px;
+    width: 30px;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    color: #32005f;
+    box-shadow: 0 0 8px 3px #B8B8B8;
+  }
+  
+
+  .avatar{
+    border-radius: 50%;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+  
+  .center{
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+  }

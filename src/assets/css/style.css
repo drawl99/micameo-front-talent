@@ -1064,6 +1064,7 @@ File: scss
       background: rgba(0, 0, 0, 0.05); }
   .topbar .profile-pic {
     width: 30px;
+    height: 30px;
     border-radius: 100%; }
   .topbar .dropdown-menu {
     box-shadow: 0 3px 12px rgba(0, 0, 0, 0.05);
@@ -1456,7 +1457,7 @@ ul#themecolors {
   background: #398bf7; }
 
 .purple-theme {
-  background: #7460ee; }
+  background: #32005f; }
 
 .megna-theme {
   background: #56c0d8; }
@@ -1509,13 +1510,13 @@ ul#themecolors {
 .purple-dark-theme {
   background: #263238;
   /* Old browsers */
-  background: -moz-linear-gradient(left, #263238 0%, #263238 23%, #7460ee 23%, #7460ee 99%);
+  background: -moz-linear-gradient(left, #263238 0%, #263238 23%, #32005f 23%, #32005f 99%);
   /* FF3.6-15 */
-  background: -webkit-linear-gradient(left, #263238 0%, #263238 23%, #7460ee 23%, #7460ee 99%);
+  background: -webkit-linear-gradient(left, #263238 0%, #263238 23%, #32005f 23%, #32005f 99%);
   /* Chrome10-25,Safari5.1-6 */
-  background: -webkit-gradient(linear, left top, right top, from(#263238), color-stop(23%, #263238), color-stop(23%, #7460ee), color-stop(99%, #7460ee));
-  background: -o-linear-gradient(left, #263238 0%, #263238 23%, #7460ee 23%, #7460ee 99%);
-  background: linear-gradient(to right, #263238 0%, #263238 23%, #7460ee 23%, #7460ee 99%); }
+  background: -webkit-gradient(linear, left top, right top, from(#263238), color-stop(23%, #263238), color-stop(23%, #32005f), color-stop(99%, #32005f));
+  background: -o-linear-gradient(left, #263238 0%, #263238 23%, #32005f 23%, #32005f 99%);
+  background: linear-gradient(to right, #263238 0%, #263238 23%, #32005f 23%, #32005f 99%); }
 
 .megna-dark-theme {
   background: #263238;

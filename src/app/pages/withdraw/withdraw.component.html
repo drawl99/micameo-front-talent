@@ -1,0 +1,26 @@
+<div class="row">
+    <div class="col-md-6">
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title">Retirar</h4>
+                <form [formGroup]="withdrawForm" (ngSubmit)="withdraw()">
+                    <div class="">
+                        <div class="form-group">
+                            <label for="exampleInputMonto">Monto a retirar</label>
+                            <div class="input-group">
+                                <div class="input-group-addon"><i class="mdi mdi-cash-usd"></i></div>
+                                <input type="number" class="form-control" id="exampleInputMonto"
+                                    placeholder="Monto a retirar" formControlName="monto">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <button type="submit" class="btn btn-primary"> Retirar </button>
+                        <button class="btn btn-danger ml-5" routerLink="../balance"> Volver </button>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

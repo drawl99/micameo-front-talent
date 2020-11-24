@@ -19,7 +19,7 @@ File: scss
 /*Top bar
 *******************/
 .topbar {
-  background: #7460ee; }
+  background: #32005f; }
   .topbar .navbar-header {
     background: #ffffff; }
   .topbar .top-navbar .navbar-header .navbar-brand .light-logo {
@@ -31,19 +31,19 @@ File: scss
       color: rgba(255, 255, 255, 0.8) !important; }
 
 .hdr-nav-bar .navbar .navbar-nav > li.active > a {
-  border-color: #7460ee; }
+  border-color: #32005f; }
 
 /*******************
 /*General Elements
 *******************/
 .lstick {
-  background: #7460ee; }
+  background: #32005f; }
 
 a.link:hover, a.link:focus {
-  color: #7460ee !important; }
+  color: #32005f !important; }
 
 .bg-theme {
-  background-color: #7460ee !important; }
+  background-color: #32005f !important; }
 
 .pagination > .active > a,
 .pagination > .active > span,
@@ -51,40 +51,40 @@ a.link:hover, a.link:focus {
 .pagination > .active > span:hover,
 .pagination > .active > a:focus,
 .pagination > .active > span:focus {
-  background-color: #7460ee;
-  border-color: #7460ee; }
+  background-color: #32005f;
+  border-color: #32005f; }
 
 .right-sidebar .rpanel-title {
-  background: #7460ee; }
+  background: #32005f; }
 
 .stylish-table tbody tr:hover, .stylish-table tbody tr.active {
-  border-left: 4px solid #7460ee; }
+  border-left: 4px solid #32005f; }
 
 .text-themecolor {
-  color: #7460ee !important; }
+  color: #32005f !important; }
 
 .profile-tab li a.nav-link.active,
 .customtab li a.nav-link.active {
-  border-bottom: 2px solid #7460ee;
-  color: #7460ee; }
+  border-bottom: 2px solid #32005f;
+  color: #32005f; }
 
 .profile-tab li a.nav-link:hover,
 .customtab li a.nav-link:hover {
-  color: #7460ee; }
+  color: #32005f; }
 
 /*******************
 /*Buttons
 *******************/
 .btn-themecolor,
 .btn-themecolor.disabled {
-  background: #7460ee;
+  background: #32005f;
   color: #ffffff;
-  border: 1px solid #7460ee; }
+  border: 1px solid #32005f; }
   .btn-themecolor:hover,
   .btn-themecolor.disabled:hover {
-    background: #7460ee;
+    background: #32005f;
     opacity: 0.7;
-    border: 1px solid #7460ee; }
+    border: 1px solid #32005f; }
   .btn-themecolor.active, .btn-themecolor:focus,
   .btn-themecolor.disabled.active,
   .btn-themecolor.disabled:focus {
@@ -94,18 +94,18 @@ a.link:hover, a.link:focus {
 /*sidebar navigation
 *******************/
 .label-themecolor {
-  background: #7460ee; }
+  background: #32005f; }
 
 .sidebar-nav > ul > li.active > a {
-  color: #7460ee;
-  border-color: #7460ee; }
+  color: #32005f;
+  border-color: #32005f; }
   .sidebar-nav > ul > li.active > a i {
-    color: #7460ee; }
+    color: #32005f; }
 
 .sidebar-nav ul li a.active, .sidebar-nav ul li a:hover {
-  color: #7460ee; }
+  color: #32005f; }
   .sidebar-nav ul li a.active i, .sidebar-nav ul li a:hover i {
-    color: #7460ee; }
+    color: #32005f; }
 
 .sidebar-nav > ul > li > a i {
   color: #a6b7bf; }

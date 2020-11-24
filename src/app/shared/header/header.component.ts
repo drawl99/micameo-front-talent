@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { Talent } from 'src/app/models/talento.model';
+import { User } from 'src/app/models/usuario.model';
+import { AuthService } from 'src/app/services/auth.service';
 
 @Component({
   selector: 'app-header',
@@ -7,10 +11,22 @@ import { Component, OnInit } from '@angular/core';
   ]
 })
 export class HeaderComponent implements OnInit {
-
-  constructor() { }
+  public user: User;
+  public talent: Talent;
+  constructor(public authService: AuthService,
+              private router: Router) { 
+                // this.user = authService.user;
+                this.talent = authService.talent;
+              }
 
   ngOnInit(): void {
+    console.log(this.talent);
+    
   }
 
+  logOut(){
+
+    this.authService.logOut();
+    this.router.navigateByUrl('/login');
+  }
 }

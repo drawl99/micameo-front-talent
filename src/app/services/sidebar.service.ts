@@ -9,11 +9,27 @@ export class SidebarService {
       titulo: 'DASHBOARD',
       icono: 'mdi mdi-gauge',
       submenu: [
-        {titulo: 'Main', url: '/'},
-        {titulo: 'ProgressBar', url: 'progress'},
-        {titulo: 'Grafica', url: 'grafica1'},
+        {titulo: 'Principal', url: '/'},
+        // {titulo: 'Pedidos', url: 'orders'},
+        // {titulo: 'Calculadora', url: 'calculadora'},
       ]
-    }
+    },
+    {
+      titulo: 'ORDENES',
+      icono: 'mdi mdi-book',
+      submenu: [
+        {titulo: 'Ordenes pendientes', url: 'orders'},
+        {titulo: 'Ordenes aceptadas', url: 'orders-accepted'}
+      ]
+    },
+    {
+      titulo: 'HERRAMIENTAS',
+      icono: 'mdi mdi-wrench',
+      submenu: [
+        {titulo: 'Calculadora de ganancias', url: 'calculadora'},
+        
+      ]
+    },
   ];
   constructor() { }
 }

@@ -1,0 +1,11 @@
+<ng-template #ordenes>
+
+    <div class="row">
+        <app-order-card (outputEmiter)="ouputEmiter($event)" class="col-lg-4 col-md-6" *ngFor="let order of orders" [order]="order"></app-order-card>
+    </div>
+</ng-template>
+
+
+<div *ngIf="orders?.length === 0 else ordenes">
+    No tienes ordenes pendientes
+</div>

@@ -1,3 +1,5 @@
+import { User } from './usuario.model';
+
 export class Talent{
 
     constructor(
@@ -5,7 +7,14 @@ export class Talent{
         public description: string,
         public response_days: number,
         public price: number,
-        public categories: number[],
-        public birthday: string
+        public categories: string[],
+        public birthday: string,
+        public phone_number: string,
+        public user: User,
     ){}
+
+    imprimirTalento(){
+        console.log(this.user);
+        
+    }
 }

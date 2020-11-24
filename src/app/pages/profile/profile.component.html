@@ -1,0 +1,133 @@
+<div class="row">
+    <div class="col-md-6">
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title">Mi perfil de usuario</h4>
+                <h6 class="card-subtitle">Ajustes</h6>
+                <form class="form p-t-20" [formGroup]="profileForm" (ngSubmit)="actualizarPerfil()">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="exampleInputuname">Nombre</label>
+                                <div class="input-group">
+                                    <div class="input-group-addon"><i class="ti-user"></i></div>
+                                    <input type="text" class="form-control" id="exampleInputuname" placeholder="Nombre" formControlName="first_name">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="exampleLastName">Apellidos</label>
+                                <div class="input-group">
+                                    <div class="input-group-addon"><i class="ti-user"></i></div>
+                                    <input type="text" class="form-control" id="exampleLastName" placeholder="Apellido" formControlName="last_name">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Email</label>
+                        <div class="input-group">
+                            <div class="input-group-addon"><i class="ti-email"></i></div>
+                            <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Correo electronico" formControlName="email">
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="exampleInputPrice">Precio</label>
+                                <div class="input-group">
+                                    <div class="input-group-addon"><i class="ti-money"></i></div>
+                                    <input type="number" class="form-control" id="exampleInputPrice" placeholder="Precio de cameo" formControlName="price">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="exampleInputResponseDays">Días de respuesta</label>
+                                <div class="input-group">
+                                    <div class="input-group-addon"><i class="ti-time"></i></div>
+                                    <input type="text" class="form-control" id="exampleInputResponseDays" placeholder="Cantidad de días en la que dispones a contestar" formControlName="response_days">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- <div class="form-group">
+                        <label for="pwd1">Password</label>
+                        <div class="input-group">
+                            <div class="input-group-addon"><i class="ti-lock"></i></div>
+                            <input type="password" class="form-control" id="pwd1" placeholder="Enter email">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="pwd2">Confirm Password</label>
+                        <div class="input-group">
+                            <div class="input-group-addon"><i class="ti-lock"></i></div>
+                            <input type="password" class="form-control" id="pwd2" placeholder="Enter email">
+                        </div>
+                    </div> -->
+                    <div class="form-group">
+                        <label class="control-label">Fecha de nacimiento</label>
+                        <input type="date" class="form-control" placeholder="dd/mm/yyyy" formControlName="birthday">
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleDescription">Descripción</label>
+                        <div class="input-group">
+                            <div class="input-group-addon"><i class="ti-user"></i></div>
+                            <textarea  id="exampleDescription" cols="50" rows="3" formControlName="description" placeholder="Pequeña biografía"></textarea>
+                            <!-- <input type="text" class="form-control" id="exampleDescription" placeholder="Nombre" formControlName="description"> -->
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="exampleInputPhone">Número de celular</label>
+                            <div class="input-group">
+                                <div class="input-group-addon"><i class="mdi mdi-cellphone-iphone"></i></div>
+                                <input type="text" class="form-control" id="exampleInputPhone" placeholder="3159874591" formControlName="phone_number">
+                            </div>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-success btn-block waves-effect waves-light m-r-10" [disabled]="profileForm.invalid">
+                        <i class="fa fa-save"></i>
+                        Guardar cambios
+                    </button>
+                    
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-6">
+        <div class="card">
+            <div class="card-body center">
+                <h4 class="card-title">Avatar</h4>
+                <h6 class="card-subtitle">Imagen del usuario</h6>
+
+                <div class="wrap-avatar">
+                    <label class="btn btn-default btn-file">
+                        <i class="fa fa-edit"></i> <input type="file" accept="image/*" style="display: none;" (change)="cambiarImagen($event)">
+                    </label>
+                    <img [src]="talent.profile_image" alt="user" width="300px" class="avatar">
+                    <div class="progress m-t-20" *ngIf="isLoading">
+                        <div class="progress-bar bg-primary progress-bar-striped active" style="height:10px;"
+                            role="progressbar" [style.width]="(uploadPercent | async) + '%'"> </div>
+                        
+                    </div>
+                </div>
+                
+
+                <!-- <input type="file" accept="image/*"> -->
+
+                <br>
+                <br>
+                <!-- <button type="button" class="btn btn-success waves-effect waves-light m-r-10">
+                    <i class="fa fa-save"></i>
+                    Cambiar imagen
+                </button> -->
+            </div>
+        </div>
+    </div>
+</div>

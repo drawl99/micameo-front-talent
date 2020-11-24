@@ -1,0 +1,35 @@
+<div class="row">
+    <div class="col-md-6">
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title">Cuánto quisieras ganar?</h4>
+                <h6 class="card-subtitle">Calcula las ganancias que quieres obtener</h6>
+                <form class="form p-t-20" [formGroup]="calculatorForm" (ngSubmit)="calcular()">
+                    <div class="form-group">
+                        <label for="exampleInputGanancia">Ganancia esperada</label>
+                        <div class="input-group">
+                            <div class="input-group-addon"><i class="ti-money"></i></div>
+                            <input type="number" class="form-control" id="exampleInputGanancia" formControlName="ganancia" placeholder="Valor esperado a ganar">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputPrecio">Precio</label>
+                        <div class="input-group">
+                            <div class="input-group-addon"><i class="ti-money"></i></div>
+                            <input type="number" class="form-control" id="exampleInputPrecio" formControlName="precio" placeholder="">
+                        </div>
+                    </div>
+
+                    <div *ngIf="cantidadCameos">
+                        <h4>Cantidad de cameos que debes realizar: {{cantidadCameos |number: '1.0-0'}} </h4>
+                    </div>
+                    <button type="submit" class="btn btn-primary waves-effect waves-light m-r-10" [disabled]="calculatorForm.invalid">
+                        <i class="mdi mdi-calculator"></i>
+                        Calcular
+                    </button>
+                    
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

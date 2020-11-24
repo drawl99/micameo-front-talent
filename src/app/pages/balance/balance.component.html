@@ -1,0 +1,65 @@
+
+
+<div class="row animated fadeIn fast" *ngIf="balance">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-body ">
+                <h3>Balance actual: {{balance.amount |currency}} </h3>
+                <button class="btn btn-primary block" (click)="retirar()">Retira tu dinero</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<ng-template #Noretiros>
+    <div class="row animated fadeIn fast">
+        <div class="col-12">
+            <div class="alert alert-info text-center">
+                <h4 class="alert-heading">Cargando</h4>
+                <i class="fa fa-spin fa-refresh fa-2x"></i>
+                <p class="mb-0">Por favor espere</p>
+            </div>
+        </div>
+    </div>
+</ng-template>
+
+
+<div class="row" *ngIf="withdraws else Noretiros">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title">Historial de retiros</h4>
+
+                <div class="table-responsive">
+                    <table class="table table-bordered" *ngIf="withdraws.length != 0 else Noretiros">
+                        <thead>
+                            <tr>
+                                <th>Id</th>
+                                <th>Creado</th>
+                                <th>Monto</th>
+                                <th>Estado</th>
+
+                            </tr>
+                        </thead>
+                        <tbody>
+
+
+                            <tr *ngFor="let withdraw of withdraws">
+                                <td> {{withdraw.id}} </td>
+                                <td> {{withdraw.created|date}} </td>
+                                <td> {{withdraw.amount|currency}} </td>
+                                <td> {{listState[withdraw.state_withdraw-1].name}} </td>
+
+
+                            </tr>   
+                        </tbody>
+                    </table>
+
+                    <ng-template #Noretiros>
+                        <h3 class="text-center"> No tienes retiros efectuados </h3>
+                    </ng-template>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

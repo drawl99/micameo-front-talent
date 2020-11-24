@@ -1,0 +1,18 @@
+input[type="file"]{
+    display: none;
+}
+label{
+    color: white;
+    height: 40px;
+    /* width: 150px; */
+    background-color: #3715b3;
+    font-weight: 400;
+    /* position: absolute; */
+    margin: auto;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    cursor: pointer;
+}
